@@ -88,54 +88,76 @@
             width: 180px;
         }
         
-	.speakers {
-		display: flex;
-		flex-direction: column;
-		gap: 40px;
-		margin-top: 30px;
-	}
+.speakers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjust grid columns */
+    gap: 40px;
+    margin-top: 30px;
+    padding: 0 20px; /* Optional: Add padding to the left and right */
+    width: 100%; /* Ensure the container takes full width but doesn't overflow */
+    max-width: 1200px; /* Optional: Control maximum width of the entire section */
+    margin-left: auto; 
+    margin-right: auto; /* Center the container */
+}
 
-	.speaker {
-		display: flex;
-		align-items: flex-start;
-		text-align: left;
-		width: 100%;
-	}
+.speaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Change from flex-start to center */
+    text-align: center; /* Change from left to center */
+    width: 100%;
+    max-width: 350px;
+}
 
-	.speaker-image {
-		flex-shrink: 0;
-		margin-right: 30px;
-	}
+.speaker-image {
+    flex-shrink: 0;
+    margin-bottom: 15px;
+    align-self: center; /* This will center the image horizontally */
+}
 
-	.speaker img {
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		object-fit: cover;
-	}
+.speaker img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-	.speaker a {
-		text-decoration: underline;
-		color: inherit;
-	}
+.speaker a {
+    text-decoration: underline;
+    color: inherit;
+}
 
-	.speaker-info {
-		flex-grow: 1;
-	}
+.speaker-info {
+    flex-grow: 1;
+}
 
-	.speaker h4 {
-		margin: 0 0 5px;
-	}
+.speaker h4 {
+    margin: 0 0 5px;
+}
 
-	.speaker .affiliation {
-		margin: 0 0 15px;
-		font-style: italic;
-	}
+.speaker .affiliation {
+    margin: 0 0 15px;
+    font-style: italic;
+}
 
-	.speaker .bio {
-		margin: 0;
-		line-height: 1.5;
-	}        
+.speaker .bio {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .speakers {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .speakers {
+        grid-template-columns: 1fr; /* One column on smaller screens */
+    }
+}
+
  
         footer {
             background-color: #333;
@@ -189,62 +211,78 @@ neural theories.</p>
         
         <!-- Keynote Speakers Section -->
        <div class="section">
-    <h2>Confirmed Speakers and Panelists</h2>
+    <h2>Speakers and Panelists</h2>
     <div class="speakers">
         <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://whc.yale.edu/sites/default/files/event-images/josh_tenenbaum.jpg" alt="Joshua Tenenbaum"></div>
             <div class="speaker-info">
-                <h4>Joshua Tenenbaum</h4>
+                <h4><a href="https://web.mit.edu/cocosci/josh.html" target="_blank" rel="noopener noreferrer">Joshua Tenenbaum</a></h4>
                 <p class="affiliation">Massachussetts Institute of Technology</p>
-		<p class="bio"><a href="https://web.mit.edu/cocosci/josh.html" target="_blank" rel="noopener noreferrer">Info</a></p>
+		<p class="bio">Confirmed</p>
             </div>
         </div>
         <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://simonsfoundation.imgix.net/wp-content/uploads/2017/08/22091206/Yamins_Daniel-copy.png" alt="Dan Yamins"></div>
             <div class="speaker-info">
-                <h4>Dan Yamins</h4>
+                <h4><a href="https://web.stanford.edu/~yamins/" target="_blank" rel="noopener noreferrer">Dan Yamins</a></h4>
                 <p class="affiliation">Standford University</p>
-		<p class="bio"><a href="https://web.stanford.edu/~yamins/" target="_blank" rel="noopener noreferrer">Info</a></p>
+		<p class="bio">Confirmed</p>
             </div>
         </div>
         <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://noambrown.github.io/assets/img/profile1.jpg" alt="Noam Brown"></div>
             <div class="speaker-info">
-                <h4>Noam Brown</h4>
+                <h4><a href="https://noambrown.github.io/" target="_blank" rel="noopener noreferrer">Noam Brown</a></h4>
                 <p class="affiliation">OpenAI</p>
-		<p class="bio"><a href="https://noambrown.github.io/" target="_blank" rel="noopener noreferrer">Info</a></p>
+		<p class="bio">Confirmed</p>
             </div>
         </div>
         <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://computationandcognition.github.io/KEllis.jpeg" alt="Kevin Ellis"></div>
             <div class="speaker-info">
-                <h4>Kevin Ellis</h4>
+                <h4><a href="https://www.cs.cornell.edu/~ellisk/" target="_blank" rel="noopener noreferrer">Kevin Ellis</a></h4>
                 <p class="affiliation">Cornell University</p>
-		<p class="bio"><a href="https://www.cs.cornell.edu/~ellisk/" target="_blank" rel="noopener noreferrer">Info</a></p>
+		<p class="bio">Confirmed</p>
             </div>
         </div>
         <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://neurokim.com/wp-content/uploads/2019/06/kimberly-stachenfeld-111-e1561035130775.jpg" alt="Kimberly Stachenfeld"></div>
             <div class="speaker-info">
-                <h4>Kimberly Stachenfeld</h4>
+                <h4><a href="https://neurokim.com/" target="_blank" rel="noopener noreferrer">Kimberly Stachenfeld</a></h4>
                 <p class="affiliation">Google DeepMind</p>
-		<p class="bio"><a href="https://neurokim.com/" target="_blank" rel="noopener noreferrer">Info</a></p>
+		<p class="bio">Confirmed</p>
             </div>
         </div>
         <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://kempnerinstitute.harvard.edu/app/uploads/2024/02/cCSPtjDZ5hgYjtNV-5-scaled-aspect-ratio-1-1-1-310x310-c-default.jpg" alt="Jennifer Hu"></div>
             <div class="speaker-info">
-                <h4>Jennifer Hu</h4>
+                <h4><a href="https://cogsci.jhu.edu/directory/jennifer-hu/" target="_blank" rel="noopener noreferrer">Jennifer Hu</a></h4>
                 <p class="affiliation">Johns Hopkins University</p>
-		<p class="bio"><a href="https://cogsci.jhu.edu/directory/jennifer-hu/" target="_blank" rel="noopener noreferrer">Info</a></p>
+		<p class="bio">Confirmed</p>
             </div>
         </div>
         <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://tmr.liacs.nl/assets/img/people_tessa.png" alt="Tessa Verhoef"></div>
             <div class="speaker-info">
-                <h4>Tessa Verhoef</h4>
+                <h4><a href="https://www.universiteitleiden.nl/en/staffmembers/tessa-verhoef" target="_blank" rel="noopener noreferrer">Tessa Verhoef</a></h4>
                 <p class="affiliation">Leiden University</p>
-		<p class="bio"><a href="https://www.universiteitleiden.nl/en/staffmembers/tessa-verhoef" target="_blank" rel="noopener noreferrer">Info</a></p>
+		<p class="bio">Confirmed</p>
             </div>
         </div>
         <div class="speaker">
+            <div class="speaker-image">
+                <img src="https://www.visionsciences.org/wordpress/wp-content/uploads/2019/03/Konkle_yia-240x300.png" alt="Talia Konkle"></div>
             <div class="speaker-info">
-                <h4>Talia Konkle</h4>
+                <h4><a href="https://psychology.fas.harvard.edu/people/talia-konkle" target="_blank" rel="noopener noreferrer">Talia Konkle</a></h4>
                 <p class="affiliation">Harvard University</p>
-		<p class="bio"><a href="https://psychology.fas.harvard.edu/people/talia-konkle" target="_blank" rel="noopener noreferrer">Info</a></p>
+		<p class="bio">Invited</p>
             </div>
         </div>
         
