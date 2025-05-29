@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Models for the Mind and Brain</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+.banner {
+    position: relative; /* Scrolls with the page */
+    width: 100%;
+    height: 300px;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), /* Dark overlay */
+        url('francesco-ungaro2_unsplash.jpg') no-repeat center top;
+    background-size: cover; /* Fills the banner, may need adjustment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.banner-text {
+    color: white;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Improves readability */
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+}
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .dates {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .dates h3 {
+            margin-top: 0;
+        }
+        
+        .dates ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .dates li {
+            margin-bottom: 10px;
+            display: flex;
+        }
+        
+        .date {
+            font-weight: bold;
+            width: 180px;
+        }
+        
+	.speakers {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		margin-top: 30px;
+	}
+
+	.speaker {
+		display: flex;
+		align-items: flex-start;
+		text-align: left;
+		width: 100%;
+	}
+
+	.speaker-image {
+		flex-shrink: 0;
+		margin-right: 30px;
+	}
+
+	.speaker img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.speaker a {
+		text-decoration: underline;
+		color: inherit;
+	}
+
+	.speaker-info {
+		flex-grow: 1;
+	}
+
+	.speaker h4 {
+		margin: 0 0 5px;
+	}
+
+	.speaker .affiliation {
+		margin: 0 0 15px;
+		font-style: italic;
+	}
+
+	.speaker .bio {
+		margin: 0;
+		line-height: 1.5;
+	}        
+ 
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .banner {
+                height: 300px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .speaker {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<script>window.addEventListener('scroll', function() {
+    const banner = document.querySelector('.banner');
+    const scrollPosition = window.scrollY;
+    banner.style.backgroundPositionY = `${scrollPosition * 0.3}px`;
+});</script>
+    <!-- Banner with Conference Title -->
+    <div class="banner">
+        <div class="banner-text">
+            <h1 style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Foundation Models for the Mind and Brain</h1>
+            <h3 style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-size: 2.5rem;">NeurIPS 2025 Workshop</h3>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="section">
+            <h2></h2>
+	    <p>Foundation models, such as large language models (LLMs) and vision language models (VLMs), have demonstrated remarkable capabilities across multiple AI/ML domains, including vision, language, and robotics. Moreover, with the recent inference-time scaling paradigm, a new type of foundation model, large reasoning models, have shown tremendous promise in achieving strong reasoning abilities in a broad range of challenging tasks. In this workshop, we want to explore an emerging use of foundation models—as powerful tools for understanding and modeling the mind (cognition) and the brain (neuroscience). We envision that research toward this new, exciting direction could create far-reaching impact in (1) advancing the science of intelligence, (2) developing cognitive science/neuroscience inspired AI, and engineering cooperative and human-centered AI systems.</p>
+            <p>This workshop will bring together researchers from neuroscience, cognitive science and machine
+learning to examine how these models can inform and be informed by biological, psychological, and
+neural theories.</p>
+	    <p>We will focus on three themes:</p>
+	    <ul>
+		<li>Science of Intelligence</li>
+		<li>Cognitive science and neuroscience inspired AI</li>
+		<li>Cooperative and human-centered AI systems</li>
+	    </ul>
+	    
+        </div>
+        
+        
+        
+        <!-- Keynote Speakers Section -->
+       <div class="section">
+    <h2>Confirmed Speakers and Panelists</h2>
+    <div class="speakers">
+        <div class="speaker">
+            <div class="speaker-info">
+                <h4>Joshua Tenenbaum</h4>
+                <p class="affiliation">Massachussetts Institute of Technology</p>
+		<p class="bio"><a href="https://web.mit.edu/cocosci/josh.html" target="_blank" rel="noopener noreferrer">Info</a></p>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-info">
+                <h4>Dan Yamins</h4>
+                <p class="affiliation">Standford University</p>
+		<p class="bio"><a href="https://web.stanford.edu/~yamins/" target="_blank" rel="noopener noreferrer">Info</a></p>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-info">
+                <h4>Noam Brown</h4>
+                <p class="affiliation">OpenAI</p>
+		<p class="bio"><a href="https://noambrown.github.io/" target="_blank" rel="noopener noreferrer">Info</a></p>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-info">
+                <h4>Kevin Ellis</h4>
+                <p class="affiliation">Cornell University</p>
+		<p class="bio"><a href="https://www.cs.cornell.edu/~ellisk/" target="_blank" rel="noopener noreferrer">Info</a></p>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-info">
+                <h4>Kimberly Stachenfeld</h4>
+                <p class="affiliation">Google DeepMind</p>
+		<p class="bio"><a href="https://neurokim.com/" target="_blank" rel="noopener noreferrer">Info</a></p>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-info">
+                <h4>Jennifer Hu</h4>
+                <p class="affiliation">Johns Hopkins University</p>
+		<p class="bio"><a href="https://cogsci.jhu.edu/directory/jennifer-hu/" target="_blank" rel="noopener noreferrer">Info</a></p>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-info">
+                <h4>Tessa Verhoef</h4>
+                <p class="affiliation">Leiden University</p>
+		<p class="bio"><a href="https://www.universiteitleiden.nl/en/staffmembers/tessa-verhoef" target="_blank" rel="noopener noreferrer">Info</a></p>
+            </div>
+        </div>
+        <div class="speaker">
+            <div class="speaker-info">
+                <h4>Talia Konkle</h4>
+                <p class="affiliation">Harvard University</p>
+		<p class="bio"><a href="https://psychology.fas.harvard.edu/people/talia-konkle" target="_blank" rel="noopener noreferrer">Info</a></p>
+            </div>
+        </div>
+        
+        
+	<!--<p style="font-style: italic;">More speakers to be announced</p>--!>
+    </div>
+</div> 
+
+
+
+
+        <!--Registration Section -->
+        <!--<div class="section">
+            <h2>Registration</h2>
+            <p>Registration for the conference is now open. Early bird rates are available until May 15, 2025.</p>
+            <table style="width:100%; border-collapse: collapse; margin-top: 20px;">
+                <tr style="background-color: #f5f5f5;">
+                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Participant Type</th>
+                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Early Bird (until May 15)</th>
+                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Regular Rate</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Academic/Faculty</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">$350</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">$450</td>
+                </tr>
+                <tr style="background-color: #f5f5f5;">
+                    <td style="padding: 10px; border: 1px solid #ddd;">Student</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">$200</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">$250</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Industry Professional</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">$450</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">$550</td>
+                </tr>
+            </table>
+            <p style="margin-top: 20px;">Registration includes access to all sessions, conference materials, coffee breaks, and lunch for all conference days.</p>
+            <p>For registration inquiries, please contact: [email address]</p>
+	    </div>--!>
+        
+        <!-- Venue Section -->
+        <div class="section">
+            <h2>Venue</h2>
+	    <!-- <p>The conference will be held at:</p>-->
+		    <p style="font-size: 1.2rem;">Colocated with <a style="color: inherit;" href="https://nips.cc/">NeurIPS 2025</a>,<br>
+		    San Francisco</p>
+            <!--<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.0435206195707!2d-63.59079182377071!3d44.63702747107249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a223b2a4df53f%3A0x405643f42dedb6e!2sKenneth%20C.%20Rowe%20Management%20Bldg%2C%206100%20University%20Ave%2C%20Halifax%2C%20NS%20B3H%201W7!5e0!3m2!1sen!2sca!4v1748353962511!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>--> 
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="section">
+            <h2>Organisers</h2>
+	    <!--<p>For any inquiries about the conference, please contact the organisers:</p>--!>
+           <!--<> <p>Marta Kryven, Assistant Professor of Computer Science, Psychology and Neuroscience (marta.kryven@dal.ca)</p>
+            <p>Aaron Newman, Professor and Chair, Psychology and Neuroscience, Computer Science, Psychiatry, Surgery, Pediatrics</p>
+            <p>Raymond Klein, Professor Emeritus, Psychology and Neuroscience, Computer Science</p>
+            <p>Simal Dolek, Graduate Student, Psychology and Neuroscience (simal.dolek@dal.ca)</p>
+            <p>Xijie Zheng, Graduate Student, Computer Science</p>
+            <p>Xuemin Yu, Graduate Student, Computer Science</p>
+            <p>Ryan McCarthy, Event Coordinator, AI Institute</p>-->
+        </div>
+
+<!-- Call for Papers Section -->
+       <div class="section">
+            <h2>Submission instructions (coming soon)</h2>
+	    <!--<P>Poster spots are assigned on a first-come, first-served basis, with a set number reserved per CS and Psychology. Confirmed presenters will receive further details, including poster dimensions. To help up plan and allocate space for your posters, we need to have your poster abstract in advance. There are two Best Poster Awards, chosen by the organizing committee.</p>
+        
+        <!-- Important Dates Section -->
+        <!--<div class="section">
+	<h2>Schedule</h2>
+            <div class="dates">
+                <ul>
+                    <li><span class="date">June 15, 2025:</span> Poster abstract submission opens</li>
+                    <li><span class="date">July 15, 2025:</span> Poster abstract submission deadline</li>
+	       </ul>
+            </div>
+        </div>-->
+
+	<div class="section">
+	    <h2>Logistics (coming soon)</h2>
+	    <!--<p>Dalhousie University, Department of Psychology and Neuroscience</p>
+	    <p>Dalhousie University, Faculty of Computer Science</p>
+	    <p>Dalhousie University, President's Office</p>
+	    <p>Dalhousie University, AI Institute</p>-->
+	</div>
+    </div>
+    
+    <footer>
+            <!--<p>Sponsors: Dalhousie University Department of Psychology and Neuroscience</p>	
+	    <p>&copy;2025 Computation and Cognition Conference. All rights reserved.</p>
+            <p>Dalhousie University • Department of Computer Science and Department of Psychology and Neuroscience</p>-->
+    </footer>
+<script>
+    window.addEventListener('scroll', function() {
+        const banner = document.querySelector('.banner');
+        if (!banner) {
+            console.error('Banner element not found');
+            return;
+        }
+        const scrollPosition = window.scrollY;
+        const offset = scrollPosition * 0.5;
+        banner.style.backgroundPosition = `center ${offset}px`;
+        console.log(`ScrollY: ${scrollPosition}, BackgroundPositionY: ${offset}px`);
+    });
+</script>
+</body>
+</html>
