@@ -20,33 +20,70 @@
             padding: 20px;
         }
         
-.banner {
-    position: relative; /* Scrolls with the page */
-    width: 100%;
-    height: 300px;
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), /* Dark overlay */
-        url('adam-mirza_unsplash.png') no-repeat center top;
-    background-size: cover; /* Fills the banner, may need adjustment */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+                url('adam-mirza_unsplash.png') no-repeat center top;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 60px; /* Offset for fixed navbar */
+        }
 
-.banner-text {
-    color: white;
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Improves readability */
-}
+        .banner-text {
+            color: white;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
 
-@media (max-width: 768px) {
-    .banner {
-        height: 300px;
-    }
-}
-        
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .navbar a:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+
         h1 {
             font-size: 4rem;
             margin-bottom: 10px;
@@ -88,77 +125,63 @@
             width: 180px;
         }
         
-.speakers {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjust grid columns */
-    gap: 40px;
-    margin-top: 30px;
-    padding: 0 20px; /* Optional: Add padding to the left and right */
-    width: 100%; /* Ensure the container takes full width but doesn't overflow */
-    max-width: 1200px; /* Optional: Control maximum width of the entire section */
-    margin-left: auto; 
-    margin-right: auto; /* Center the container */
-}
+        .speakers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+            padding: 0 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-.speaker {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Change from flex-start to center */
-    text-align: center; /* Change from left to center */
-    width: 100%;
-    max-width: 350px;
-}
+        .speaker {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+        }
 
-.speaker-image {
-    flex-shrink: 0;
-    margin-bottom: 15px;
-    align-self: center; /* This will center the image horizontally */
-}
+        .speaker-image {
+            flex-shrink: 0;
+            margin-bottom: 15px;
+            align-self: center;
+        }
 
-.speaker img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+        .speaker img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
 
-.speaker a {
-    text-decoration: underline;
-    color: inherit;
-}
+        .speaker a {
+            text-decoration: underline;
+            color: inherit;
+        }
 
-.speaker-info {
-    flex-grow: 1;
-}
+        .speaker-info {
+            flex-grow: 1;
+        }
 
-.speaker h4 {
-    margin: 0 0 5px;
-}
+        .speaker h4 {
+            margin: 0 0 5px;
+        }
 
-.speaker .affiliation {
-    margin: 0 0 15px;
-    font-style: italic;
-}
+        .speaker .affiliation {
+            margin: 0 0 15px;
+            font-style: italic;
+        }
 
-.speaker .bio {
-    margin: 0;
-    line-height: 1.5;
-}
+        .speaker .bio {
+            margin: 0;
+            line-height: 1.5;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .speakers {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .speakers {
-        grid-template-columns: 1fr; /* One column on smaller screens */
-    }
-}
-
- 
         footer {
             background-color: #333;
             color: white;
@@ -166,30 +189,60 @@
             padding: 20px;
             margin-top: 40px;
         }
-        
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .banner {
                 height: 300px;
+                margin-top: 80px; /* Adjust for taller navbar on mobile */
             }
             
             h1 {
                 font-size: 2rem;
             }
             
-            .speaker {
-                width: 100%;
+            .speakers {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            .navbar li {
+                margin: 5px 0;
+            }
+
+            .navbar a {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .speakers {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-<script>window.addEventListener('scroll', function() {
-    const banner = document.querySelector('.banner');
-    const scrollPosition = window.scrollY;
-    banner.style.backgroundPositionY = `${scrollPosition * 0.3}px`;
-});</script>
+    <!-- Navigation Menu -->
+    <nav class="navbar" aria-label="Main navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#organisers">Organisers</a></li>
+            <li><a href="#submission">Submission</a></li>
+            <li><a href="#logistics">Logistics</a></li>
+        </ul>
+    </nav>
+
     <!-- Banner with Conference Title -->
-    <div class="banner">
+    <div class="banner" id="home">
         <div class="banner-text">
             <h1 style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Foundation Models for Mind and Brain</h1>
             <h3 style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-size: 2.5rem;">NeurIPS 2025 Workshop</h3>
@@ -197,156 +250,151 @@
     </div>
     
     <div class="container">
-        <!-- Introduction Section -->
-        <div class="section">
-            <h2></h2>
-	    <p>Foundation models, such as large language models (LLMs) and vision language models (VLMs), have demonstrated remarkable capabilities across multiple AI/ML domains, including vision, language, and robotics. Moreover, with the recent inference-time scaling paradigm, a new type of foundation model, large reasoning models, have shown tremendous promise in achieving strong reasoning abilities in a broad range of challenging tasks. In this workshop, we will explore an emerging use of these foundation models: as powerful tools for understanding and modeling the mind (cognition) and the brain (neuroscience). Research in this new, exciting direction will have a far-reaching impact on (1) the science of intelligence, (2) cognitive science/neuroscience inspired AI, and (3) cooperative and human-centered AI systems.</p>
-            <p>Focusing on these three topics, this workshop will bring together neuroscience, cognitive science and machine
-learning researchers to examine how these models can inform and be informed by biological, psychological and
-neural theories.</p>
-	    
+        <!-- about Section -->
+        <div class="section" id="about">
+            <h2>About the workshop</h2>
+            <p>Foundation models, such as large language models (LLMs) and vision language models (VLMs), have demonstrated remarkable capabilities across multiple AI/ML domains, including vision, language, and robotics. Moreover, with the recent inference-time scaling paradigm, a new type of foundation model, large reasoning models, have shown tremendous promise in achieving strong reasoning abilities in a broad range of challenging tasks. In this workshop, we will explore an emerging use of these foundation models: as powerful tools for understanding and modeling the mind (cognition) and the brain (neuroscience). Research in this new, exciting direction will have a far-reaching impact on (1) the science of intelligence, (2) cognitive science/neuroscience inspired AI, and (3) cooperative and human-centered AI systems.</p>
+            <p>Focusing on these three topics, this workshop will bring together neuroscience, cognitive science and machine learning researchers to examine how these models can inform and be informed by biological, psychological and neural theories.</p>
+            <p><strong>Science of Intelligence</strong></p>
+            <p>We will discuss how to advance the understanding and modeling of the
+mind (cognitive science) and brain (neuroscience). We will focus on the following questions:</p>
+            <ul>
+                <li>How can we extract emergent cognitive skills, internal representations, and latent inductive biases in foundation models and compare them with human cognitive skills, neural
+representations, and cognitive biases?</li>
+                <li>How can we leverage foundation models to automatically discover cognitive and neural
+models for humans and animals?</li>
+                <li>Can large generative models help cognitive scientists and neuroscientists to procedurally
+generate high-quality and controllable stimuli for large-scale behavioral and neural studies?</li>
+            </ul>
+            <p><strong>Cognitive science and neuroscience inspired AI</strong></p>
+            <p>We will explore ways in which new insights
+from cognitive science and neuroscience, enabled by foundation models, can better inform the development of future AI/ML models. Topics under this theme include, but are not limited to:</p>
+            <ul>
+                <li>Aligning foundation models with behavioral and neural data, including both internal representations as well as cognitive abilities.</li>
+                <li>Cognitively and neurally inspired, reliable, interpretable, and steerable AI systems.</li>
+                <li>Human-AI benchmarking for studying the human-machine intelligence gaps.</li>
+                <li>Efficient test-time adaptation and continual learning inspired by human learning.</li>
+            </ul>
+            <p><strong>Cooperative and human-centered AI systems</strong></p>
+            <p>Given our understanding of the human mind and
+brain, we will discuss how to engineer AI systems that can better understand and cooperate with
+humans in a trustworthy manner. Relevant topics for this theme include, but are not limited to:</p>
+            <ul>
+                <li>Socially intelligent LLM agents that can successfully and robustly understand and interact
+with humans and other agents.</li>
+                <li>Adaptive AI systems for personalized assistance.</li>
+                <li>Interpretable and trustworthy AI systems enabled by foundation models that are more
+aligned with human cognitive skills and neural representations.</li>
+            </ul>
         </div>
-        
-        
         
         <!-- Keynote Speakers Section -->
-       <div class="section">
-    <h2>Speakers and Panelists</h2>
-    <div class="speakers">
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://whc.yale.edu/sites/default/files/event-images/josh_tenenbaum.jpg" alt="Joshua Tenenbaum"></div>
-            <div class="speaker-info">
-                <h4><a href="https://web.mit.edu/cocosci/josh.html" target="_blank" rel="noopener noreferrer">Joshua Tenenbaum</a></h4>
-                <p class="affiliation">Massachussetts Institute of Technology</p>
-		<p class="bio">Confirmed</p>
+        <div class="section" id="speakers">
+            <h2>Speakers and Panelists</h2>
+            <div class="speakers">
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://whc.yale.edu/sites/default/files/event-images/josh_tenenbaum.jpg" alt="Joshua Tenenbaum">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://web.mit.edu/cocosci/josh.html" target="_blank" rel="noopener noreferrer">Joshua Tenenbaum</a></h4>
+                        <p class="affiliation">Massachusetts Institute of Technology</p>
+                        <p class="bio">Confirmed</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://simonsfoundation.imgix.net/wp-content/uploads/2017/08/22091206/Yamins_Daniel-copy.png" alt="Dan Yamins">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://web.stanford.edu/~yamins/" target="_blank" rel="noopener noreferrer">Dan Yamins</a></h4>
+                        <p class="affiliation">Stanford University</p>
+                        <p class="bio">Confirmed</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://noambrown.github.io/assets/img/profile1.jpg" alt="Noam Brown">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://noambrown.github.io/" target="_blank" rel="noopener noreferrer">Noam Brown</a></h4>
+                        <p class="affiliation">OpenAI</p>
+                        <p class="bio">Confirmed</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://computationandcognition.github.io/KEllis.jpeg" alt="Kevin Ellis">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://www.cs.cornell.edu/~ellisk/" target="_blank" rel="noopener noreferrer">Kevin Ellis</a></h4>
+                        <p class="affiliation">Cornell University</p>
+                        <p class="bio">Confirmed</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://neurokim.com/wp-content/uploads/2019/06/kimberly-stachenfeld-111-e1561035130775.jpg" alt="Kimberly Stachenfeld">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://neurokim.com/" target="_blank" rel="noopener noreferrer">Kimberly Stachenfeld</a></h4>
+                        <p class="affiliation">Google DeepMind</p>
+                        <p class="bio">Confirmed</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://kempnerinstitute.harvard.edu/app/uploads/2024/02/cCSPtjDZ5hgYjtNV-5-scaled-aspect-ratio-1-1-1-310x310-c-default.jpg" alt="Jennifer Hu">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://cogsci.jhu.edu/directory/jennifer-hu/" target="_blank" rel="noopener noreferrer">Jennifer Hu</a></h4>
+                        <p class="affiliation">Johns Hopkins University</p>
+                        <p class="bio">Confirmed</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://tmr.liacs.nl/assets/img/people_tessa.png" alt="Tessa Verhoef">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://www.universiteitleiden.nl/en/staffmembers/tessa-verhoef" target="_blank" rel="noopener noreferrer">Tessa Verhoef</a></h4>
+                        <p class="affiliation">Leiden University</p>
+                        <p class="bio">Confirmed</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://cocolab.stanford.edu/images/members/noah.jpg" alt="Noah Goodman">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://cocolab.stanford.edu/ndg" target="_blank" rel="noopener noreferrer">Noah Goodman</a></h4>
+                        <p class="affiliation">Stanford University</p>
+                        <p class="bio">Confirmed</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <div class="speaker-image">
+                        <img src="https://kempnerinstitute.harvard.edu/app/uploads/2025/02/Ellie-Pavlick-headshot-aspect-ratio-45-52-450x0-c-default.jpg" alt="Ellie Pavlick">
+                    </div>
+                    <div class="speaker-info">
+                        <h4><a href="https://cs.brown.edu/people/epavlick/" target="_blank" rel="noopener noreferrer">Ellie Pavlick</a></h4>
+                        <p class="affiliation">Brown University</p>
+                        <p class="bio">Tentative</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://simonsfoundation.imgix.net/wp-content/uploads/2017/08/22091206/Yamins_Daniel-copy.png" alt="Dan Yamins"></div>
-            <div class="speaker-info">
-                <h4><a href="https://web.stanford.edu/~yamins/" target="_blank" rel="noopener noreferrer">Dan Yamins</a></h4>
-                <p class="affiliation">Stanford University</p>
-		<p class="bio">Confirmed</p>
-            </div>
-        </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://noambrown.github.io/assets/img/profile1.jpg" alt="Noam Brown"></div>
-            <div class="speaker-info">
-                <h4><a href="https://noambrown.github.io/" target="_blank" rel="noopener noreferrer">Noam Brown</a></h4>
-                <p class="affiliation">OpenAI</p>
-		<p class="bio">Confirmed</p>
-            </div>
-        </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://computationandcognition.github.io/KEllis.jpeg" alt="Kevin Ellis"></div>
-            <div class="speaker-info">
-                <h4><a href="https://www.cs.cornell.edu/~ellisk/" target="_blank" rel="noopener noreferrer">Kevin Ellis</a></h4>
-                <p class="affiliation">Cornell University</p>
-		<p class="bio">Confirmed</p>
-            </div>
-        </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://neurokim.com/wp-content/uploads/2019/06/kimberly-stachenfeld-111-e1561035130775.jpg" alt="Kimberly Stachenfeld"></div>
-            <div class="speaker-info">
-                <h4><a href="https://neurokim.com/" target="_blank" rel="noopener noreferrer">Kimberly Stachenfeld</a></h4>
-                <p class="affiliation">Google DeepMind</p>
-		<p class="bio">Confirmed</p>
-            </div>
-        </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://kempnerinstitute.harvard.edu/app/uploads/2024/02/cCSPtjDZ5hgYjtNV-5-scaled-aspect-ratio-1-1-1-310x310-c-default.jpg" alt="Jennifer Hu"></div>
-            <div class="speaker-info">
-                <h4><a href="https://cogsci.jhu.edu/directory/jennifer-hu/" target="_blank" rel="noopener noreferrer">Jennifer Hu</a></h4>
-                <p class="affiliation">Johns Hopkins University</p>
-		<p class="bio">Confirmed</p>
-            </div>
-        </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://tmr.liacs.nl/assets/img/people_tessa.png" alt="Tessa Verhoef"></div>
-            <div class="speaker-info">
-                <h4><a href="https://www.universiteitleiden.nl/en/staffmembers/tessa-verhoef" target="_blank" rel="noopener noreferrer">Tessa Verhoef</a></h4>
-                <p class="affiliation">Leiden University</p>
-		<p class="bio">Confirmed</p>
-            </div>
-        </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://cocolab.stanford.edu/images/members/noah.jpg" alt="Noah Goodman"></div>
-            <div class="speaker-info">
-                <h4><a href="https://cocolab.stanford.edu/ndg" target="_blank" rel="noopener noreferrer">Noah Goodman</a></h4>
-                <p class="affiliation">Stanford University</p>
-		<p class="bio">Confirmed</p>
-            </div>
-        </div>
-        <div class="speaker">
-            <div class="speaker-image">
-                <img src="https://kempnerinstitute.harvard.edu/app/uploads/2025/02/Ellie-Pavlick-headshot-aspect-ratio-45-52-450x0-c-default.jpg" alt="Ellie Pavlick"></div>
-            <div class="speaker-info">
-                <h4><a href="https://cs.brown.edu/people/epavlick/" target="_blank" rel="noopener noreferrer">Ellie Pavlick</a></h4>
-                <p class="affiliation">Brown University</p>
-		<p class="bio">Tentative</p>
-            </div>
-        </div>
-
-        
-        
-	<!--<p style="font-style: italic;">More speakers to be announced</p>--!>
-    </div>
-</div> 
-
-
-
-
-        <!--Registration Section -->
-        <!--<div class="section">
-            <h2>Registration</h2>
-            <p>Registration for the conference is now open. Early bird rates are available until May 15, 2025.</p>
-            <table style="width:100%; border-collapse: collapse; margin-top: 20px;">
-                <tr style="background-color: #f5f5f5;">
-                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Participant Type</th>
-                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Early Bird (until May 15)</th>
-                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Regular Rate</th>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #ddd;">Academic/Faculty</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$350</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$450</td>
-                </tr>
-                <tr style="background-color: #f5f5f5;">
-                    <td style="padding: 10px; border: 1px solid #ddd;">Student</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$200</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$250</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #ddd;">Industry Professional</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$450</td>
-                    <td style="padding: 10px; border: 1px solid #ddd;">$550</td>
-                </tr>
-            </table>
-            <p style="margin-top: 20px;">Registration includes access to all sessions, conference materials, coffee breaks, and lunch for all conference days.</p>
-            <p>For registration inquiries, please contact: [email address]</p>
-	    </div>--!>
         
         <!-- Venue Section -->
-        <div class="section">
+        <div class="section" id="venue">
             <h2>Venue</h2>
-	    <!-- <p>The conference will be held at:</p>-->
-		    <p style="font-size: 1.2rem;">Colocated with <a style="color: inherit;" href="https://neurips.cc/Conferences/2025">NeurIPS 2025</a>,<br>
-		    San Diego</p>
-            <!--<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.0435206195707!2d-63.59079182377071!3d44.63702747107249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a223b2a4df53f%3A0x405643f42dedb6e!2sKenneth%20C.%20Rowe%20Management%20Bldg%2C%206100%20University%20Ave%2C%20Halifax%2C%20NS%20B3H%201W7!5e0!3m2!1sen!2sca!4v1748353962511!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>--> 
+            <p style="font-size: 1.2rem;">Colocated with <a style="color: inherit;" href="https://neurips.cc/Conferences/2025">NeurIPS 2025</a>,<br>
+            San Diego</p>
         </div>
         
-        <!-- Contact Section -->
-        <div class="section">
+        <!-- Organisers Section -->
+        <div class="section" id="organisers">
             <h2>Organisers</h2>
-	    <!--<p>For any inquiries about the conference, please contact the organisers:</p>--!>
             <p>Leyla Isik, Johns Hopkins University</p>
             <p>Marta Kryven, Dalhousie University</p>
             <p>Tianmin Shu, Johns Hopkins University</p>
@@ -355,48 +403,48 @@ neural theories.</p>
             <p>Chuanyang Jin, Johns Hopkins University</p>
         </div>
 
-<!-- Call for Papers Section -->
-       <div class="section">
-            <h2>Submission instructions (coming soon)</h2>
-	    <!--<P>Poster spots are assigned on a first-come, first-served basis, with a set number reserved per CS and Psychology. Confirmed presenters will receive further details, including poster dimensions. To help up plan and allocate space for your posters, we need to have your poster abstract in advance. There are two Best Poster Awards, chosen by the organizing committee.</p>
-        
-        <!-- Important Dates Section -->
-        <!--<div class="section">
-	<h2>Schedule</h2>
-            <div class="dates">
-                <ul>
-                    <li><span class="date">June 15, 2025:</span> Poster abstract submission opens</li>
-                    <li><span class="date">July 15, 2025:</span> Poster abstract submission deadline</li>
-	       </ul>
-            </div>
-        </div>-->
+        <!-- Call for Papers Section -->
+        <div class="section" id="submission">
+            <h2>Submission Instructions (coming soon)</h2>
+        </div>
 
-	<div class="section">
-	    <h2>Logistics (coming soon)</h2>
-	    <!--<p>Dalhousie University, Department of Psychology and Neuroscience</p>
-	    <p>Dalhousie University, Faculty of Computer Science</p>
-	    <p>Dalhousie University, President's Office</p>
-	    <p>Dalhousie University, AI Institute</p>-->
-	</div>
+        <!-- Logistics Section -->
+        <div class="section" id="logistics">
+            <h2>Logistics (coming soon)</h2>
+        </div>
     </div>
     
     <footer>
-            <!--<p>Sponsors: Dalhousie University Department of Psychology and Neuroscience</p>	
-	    <p>&copy;2025 Computation and Cognition Conference. All rights reserved.</p>
-            <p>Dalhousie University • Department of Computer Science and Department of Psychology and Neuroscience</p>-->
     </footer>
-<script>
-    window.addEventListener('scroll', function() {
-        const banner = document.querySelector('.banner');
-        if (!banner) {
-            console.error('Banner element not found');
-            return;
-        }
-        const scrollPosition = window.scrollY;
-        const offset = scrollPosition * 0.5;
-        banner.style.backgroundPosition = `center ${offset}px`;
-        console.log(`ScrollY: ${scrollPosition}, BackgroundPositionY: ${offset}px`);
-    });
-</script>
+
+    <script>
+        // Parallax effect for banner
+        window.addEventListener('scroll', function() {
+            const banner = document.querySelector('.banner');
+            if (!banner) {
+                console.error('Banner element not found');
+                return;
+            }
+            const scrollPosition = window.scrollY;
+            const offset = scrollPosition * 0.5;
+            banner.style.backgroundPosition = `center ${offset}px`;
+        });
+
+        // Smooth scrolling for navbar
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 20;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
